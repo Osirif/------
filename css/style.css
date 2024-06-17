@@ -40,10 +40,6 @@ h2 {
 
 /* шапка */
 
-.burger__menu {
-    display: none;
-}
-
 .header {
     position: fixed;
     top: 0;
@@ -77,12 +73,10 @@ h2 {
     position: absolute;
     width: 100%;
     height: 2px;
-    /* Толщина линии */
     bottom: 0;
     left: 0;
     top: 1.3em;
     background-color: #fff;
-    /* Цвет линии */
     transform: scaleX(0);
     transition: transform 0.3s;
 }
@@ -96,14 +90,17 @@ h2 {
     width: 7vw;
 }
 
+.burger__menu {
+    display: none;
+}
 
 /* основной контент index.html */
+
+/* слайдер */
 
 .hello__screen {
     height: 100vh;
 }
-
-/* слайдер */
 
 .slider {
     position: relative;
@@ -164,14 +161,15 @@ h2 {
     width: 10vw;
     height: 5vh;
     font-size: 20px;
-    background: linear-gradient(146deg, rgba(81, 45, 129, 1) 0%, rgba(9, 80, 205, 1) 100%);
+    background: linear-gradient(146deg, 
+    rgba(81, 45, 129, 1)
+     0%, rgba(9, 80, 205, 1) 100%);
     background-size: 200% 100%;
     border: none;
     color: white;
     font-weight: bold;
     cursor: pointer;
     transition: background-position 0.3s;
-    /* Плавная анимация изменения background-position в течение 0.3 секунды */
 }
 
 .slide__info-btn:hover {
@@ -250,7 +248,9 @@ h2 {
 
 .advantages__item::before {
     content: '';
-    background: linear-gradient(146deg, rgba(81, 45, 129, 1) 0%, #092b66 120%);
+    background: linear-gradient(146deg, 
+    rgba(81, 45, 129, 1) 
+    0%, #092b66 120%);
     z-index: -1;
     opacity: 0;
     visibility: hidden;
@@ -260,7 +260,9 @@ h2 {
     right: 0;
     bottom: 0;
     transition: 0.3s ease;
-    transition-property: color, background, mix-blend-mode, opacity, visibility, height;
+    transition-property: color, 
+    background, mix-blend-mode,
+    opacity, visibility, height;
     box-sizing: inherit;
     border-width: 0;
 }
@@ -440,6 +442,214 @@ h2 {
     transition: 0.3s;
 }
 
+
+/* Турнирная сетка */
+
+.tournament {
+    font-family: Montserrat;
+    margin-top: 10vh;
+    margin-left: 11vw;
+    margin-right: 11vw;
+}
+
+.tournamnet__header-title {
+    font-size: 25px;
+    font-family: Montserrat;
+    margin-bottom: 2vh;
+    margin-top: 2vh;
+}
+
+.tournament__row {
+    position: relative;
+    z-index: 1;
+    padding: 2vh 2vw;
+    background: #110719;
+    transition: background-position 
+    0.3s;
+    display: flex;
+    align-items: center;
+    margin-bottom: 3vh;
+    border-bottom: 1px solid 
+    rgba(128, 128, 128, 0.11);
+}
+
+.row__info {
+    display: flex;
+    align-items: center;
+}
+
+.row__info::before {
+    content: '';
+    background: linear-gradient(
+        146deg, rgba(62, 36, 107, 1) 
+        0%, rgba(7, 80, 208, 1)
+         35%, rgba(17, 7, 25, 1) 86%);
+    z-index: -1;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: 0.3s ease;
+    transition-property: color, 
+    background, mix-blend-mode, opacity, 
+    visibility, height;
+    box-sizing: inherit;
+    border-width: 0;
+}
+
+.row__info:hover::before {
+    opacity: 1;
+    visibility: visible;
+}
+
+.row__cells {
+    display: flex;
+    align-items: center;
+    margin-right: 4vw;
+}
+
+.row__cells p {
+    font-weight: bold;
+    font-size: 25px;
+    margin-left: 2vw;
+    margin-right: 2vw;
+}
+
+.row__cell {
+    background: #0b0612c2;
+    padding: 2vh 1.3vw;
+    height: 23vh;
+    width: 9vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.row__text-purple {
+    margin-top: 1vh;
+    color: #9a50fc;
+    font-weight: bold;
+}
+
+.cell-win {
+    position: relative;
+}
+
+.cell-win::before {
+    position: absolute;
+    content: 'win';
+    text-transform: lowercase;
+    font-family: Montserrat;
+    top: 0;
+    left: 0;
+    font-size: 14px;
+    padding: 2px 3px;
+    font-weight: bold;
+    background-color: #904315;
+}
+
+.cell__img {
+    width: 6vw;
+    height: 12vh;
+}
+
+.row__text {
+    margin-right: 16vw;
+}
+
+.row__text h3 {
+    font-family: Montserrat;
+    font-size: 27px;
+}
+
+.row__text h3:hover {
+    color: #aaadd1;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.row__text p {
+    font-family: Montserrat;
+    font-size: 20px;
+    margin-top: 1vh;
+}
+
+.row__stream {
+    z-index: 0;
+    width: 10vw;
+    height: 100%;
+}
+
+.stream__block {
+    display: flex;
+    width: 10vw;
+    height: 100%;
+    font-size: 20px;
+    flex-direction: row;
+    white-space: nowrap;
+    z-index: 2;
+}
+
+.stream__block:hover {
+    color: #9a50fc;
+    transition: 0.3s;
+}
+
+.stream__block span {
+    margin-left: 1vw;
+    font-family: Montserrat;
+}
+
+/* Конец index.html */
+
+.end {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 10vw;
+    background-image: url(../img/scroll.jpg);
+    background-position: left bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.end::after{
+    position: absolute;
+    content: '';
+    background-color: #00000096;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.end__title {
+    text-transform: uppercase;
+    z-index: 10;
+}
+
+.end p {
+    font-size: 23px;
+    margin-top: 3vh;
+    padding-right: 50vw;
+    z-index: 10;
+}
+
+.btn__end {
+    height: 6vh;
+    width: 18vw;
+    z-index: 10;
+}
+
 /* Контакты */
 
 .header__contact {
@@ -507,13 +717,12 @@ h2 {
     width: 8vw;
 }
 
-/* Турнирная сетка */
+/* Страница Турнир */
 
-.tournament {
-    font-family: Montserrat;
-    margin-top: 10vh;
-    margin-left: 11vw;
-    margin-right: 11vw;
+.tournament__header__info {
+    background-color: #242424;
+    display: flex;
+    flex-direction: column;
 }
 
 .tournament__img {
@@ -522,184 +731,6 @@ h2 {
     margin-bottom: 0;
     padding-bottom: 0;
 }
-
-.tournament__header__info {
-    background-color: #242424;
-    display: flex;
-    flex-direction: column;
-}
-
-.tournamnet__header-title {
-    font-size: 25px;
-    font-family: Montserrat;
-    margin-bottom: 2vh;
-    margin-top: 2vh;
-}
-
-.tournament__row {
-    position: relative;
-    z-index: 1;
-    padding: 2vh 2vw;
-    background: #110719;
-    transition: background-position 0.3s;
-    display: flex;
-    align-items: center;
-    margin-bottom: 3vh;
-    border-bottom: 1px solid rgba(128, 128, 128, 0.11);
-}
-
-.row__info {
-    display: flex;
-    align-items: center;
-}
-
-.row__info::before {
-    content: '';
-    background: linear-gradient(146deg, rgba(62, 36, 107, 1) 0%, rgba(7, 80, 208, 1) 35%, rgba(17, 7, 25, 1) 86%);
-    z-index: -1;
-    opacity: 0;
-    visibility: hidden;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    transition: 0.3s ease;
-    transition-property: color, background, mix-blend-mode, opacity, visibility, height;
-    box-sizing: inherit;
-    border-width: 0;
-}
-
-.row__info:hover::before {
-    opacity: 1;
-    visibility: visible;
-}
-
-.row__cells {
-    display: flex;
-    align-items: center;
-    margin-right: 4vw;
-}
-
-.row__cells p {
-    font-weight: bold;
-    font-size: 25px;
-    margin-left: 2vw;
-    margin-right: 2vw;
-}
-
-.row__cell {
-    background: #0b0612c2;
-    padding: 2vh 1.3vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 20px;
-    text-transform: uppercase;
-}
-
-.row__text-purple {
-    margin-top: 1vh;
-    color: #9a50fc;
-    font-weight: bold;
-}
-
-.cell-win {
-    position: relative;
-}
-
-.cell-win::before {
-    position: absolute;
-    content: 'win';
-    text-transform: lowercase;
-    font-family: Montserrat;
-    top: 0;
-    left: 0;
-    font-size: 14px;
-    padding: 2px 3px;
-    font-weight: bold;
-    background-color: #904315;
-}
-
-.cell__img {
-    width: 6vw;
-    filter: invert(100%);
-}
-
-.row__text {
-    margin-right: 16vw;
-}
-
-.row__text h3 {
-    font-family: Montserrat;
-    font-size: 27px;
-}
-
-.row__text h3:hover {
-    color: #aaadd1;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-
-.row__text p {
-    font-family: Montserrat;
-    font-size: 20px;
-    margin-top: 1vh;
-}
-
-.row__stream {
-    z-index: 0;
-    width: 10vw;
-    height: 100%;
-}
-
-.stream__block {
-    display: flex;
-    width: 10vw;
-    height: 100%;
-    font-size: 20px;
-    flex-direction: row;
-    white-space: nowrap;
-    z-index: 2;
-}
-
-.stream__block:hover {
-    color: #9a50fc;
-    transition: 0.3s;
-}
-
-.stream__block span {
-    margin-left: 1vw;
-    font-family: Montserrat;
-}
-
-.end {
-    display: flex;
-    flex-direction: column;
-    padding: 10vw;
-    background-image: url(../img/scroll.png);
-    background-position: left bottom;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
-
-.end__title {
-    text-transform: uppercase;
-}
-
-.end p {
-    font-size: 23px;
-    margin-top: 3vh;
-    padding-right: 50vw;
-}
-
-.btn__end {
-    height: 6vh;
-    width: 18vw;
-}
-
 
 .header__info__game {
     display: flex;
@@ -723,6 +754,10 @@ h2 {
     align-items: center;
     justify-content: start;
     gap: 1vw;
+}
+
+.flag__img{
+    width: 1vw;
 }
 
 .info__game__img {
@@ -809,57 +844,7 @@ h2 {
     font-size: 14px;
 }
 
-.hero {
-    position: relative;
-    text-align: center;
-    overflow: hidden;
-    color: #fcfcfc;
-}
-
-.hero h1 {
-    font-family: Montserrat;
-    font-weight: normal;
-    font-size: 5.4em;
-    margin: 0 0 20px;
-    text-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
-    text-transform: uppercase;
-    letter-spacing: -1px;
-}
-
-.hero p {
-    font-family: Montserrat;
-    text-transform: uppercase;
-    color: #5CCA87;
-    letter-spacing: 6px;
-    text-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
-    font-size: 1.2em;
-}
-
-.hero-wrap {
-    padding: 3.5em 10px;
-}
-
-.hero p.intro {
-    font-family: Montserrat;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-size: 3em;
-    margin-bottom: -40px;
-}
-
-.hero p.year {
-    color: #fff;
-    letter-spacing: 20px;
-    font-size: 34px;
-    margin: -25px 0 25px;
-}
-
-.hero p.year i {
-    font-size: 14px;
-    vertical-align: middle;
-}
-
-#bracket {
+.bracket {
     width: 100%;
     overflow: hidden;
     background-color: #110719;
@@ -916,7 +901,7 @@ h2 {
     width: 30.8333%\9;
 }
 
-.split-one .round {
+.split .round {
     margin: 0 2.5% 0 0;
 }
 
@@ -936,7 +921,8 @@ h2 {
     float: right;
     color: #0646B6;
     font-weight: bold;
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Roboto Condensed',
+    sans-serif;
     position: absolute;
     right: 5px;
 }
@@ -950,7 +936,6 @@ h2 {
     white-space: nowrap;
     overflow: hidden;
     position: relative;
-
 }
 
 .round-two .matchup {
@@ -1069,13 +1054,14 @@ h2 {
     width: 10vw;
     height: 5vh;
     font-size: 20px;
-    background: linear-gradient(146deg, rgba(81, 45, 129, 1) 0%, rgba(9, 80, 205, 1) 100%);
+    background: linear-gradient(146deg, 
+    rgba(81, 45, 129, 1) 0%, 
+    rgba(9, 80, 205, 1) 100%);
     background-size: 200% 100%;
     border: none;
     color: white;
     cursor: pointer;
     transition: background-position 0.3s;
-    /* Плавная анимация изменения background-position в течение 0.3 секунды */
 }
 
 .info__btn:hover {
@@ -1087,7 +1073,6 @@ h2 {
 }
 
 .tickets {
-
     display: flex;
     flex-direction: column;
     margin-left: 8vw;
@@ -1138,13 +1123,15 @@ h2 {
 }
 
 input:focus,
-select:focus {
+select:focus,
+textarea:focus {
     outline: none;
 }
 
 .input-search {
     width: 30vw;
-    background: url(/img/search.svg) no-repeat;
+    background: url(/img/search.svg)
+    no-repeat;
     background-size: 4%;
     background-position: 1% 50%;
     background-color: #fff;
@@ -1283,7 +1270,7 @@ select:focus {
 
 /* Команда */
 
-.rewards__mobile{
+.rewards__mobile {
     display: none;
 }
 
@@ -1426,7 +1413,7 @@ h6 {
     gap: 1vw;
 }
 
-.persong__info {
+.person__info {
     display: flex;
     flex-direction: column;
     gap: 0.5vh;
@@ -1435,58 +1422,6 @@ h6 {
 
 .person__img {
     width: 4vw;
-}
-
-.member__statistic {
-    display: flex;
-    flex-direction: column;
-}
-
-.info-green {
-    color: green;
-}
-
-.info-red {
-    color: red;
-}
-
-.statistic {
-    display: block;
-    position: relative;
-    width: 20vw;
-    background: #ae110c;
-    height: 3vh;
-    border-radius: 20px;
-    border: none;
-}
-
-.bar {
-    display: block;
-    width: 100%;
-    height: 100%;
-    background-color: #18e111;
-    border-radius: 20px 0 0 20px;
-}
-
-.bar-100 {
-    border-radius: 20px;
-}
-
-.bar::after {
-    content: '';
-    color: #fff;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    font-size: 20px;
-}
-
-
-.statistic__info {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
 }
 
 .teams__history {
@@ -1561,59 +1496,16 @@ h6 {
     margin-bottom: 2vh;
 }
 
-
-table {
-    border-collapse: collapse;
-    width: 100%;
-    margin: 2vh 1vw;
-}
-
-tr {
-    border: 1px solid #101010;
-    transition: 0.4s ease;
-}
-
-th {
-    height: 6vh;
-    text-align: left;
-    padding-left: 1vw;
-}
-
-td {
-    height: 8vh;
-    padding-left: 1vw;
-}
-
-.table__header {
-    background-color: #101010;
-}
-
-.td__flex {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.td__info {
+.text-flag{
     display: flex;
     flex-direction: row;
-
-    gap: 1vw;
-    font-size: 20px;
-}
-
-.td__img {
-    width: 2vw;
-}
-
-.td__text {
-    text-align: right;
+    gap: 0.2vw;
 }
 
 /* Участник */
 
 .grid4,
-.grid5{
+.grid5 {
     display: none;
 }
 
@@ -1622,12 +1514,12 @@ td {
     height: 40vh;
 }
 
-.header__member{
+.header__member {
     flex-direction: row;
     margin-left: 0;
 }
 
-.member__info{
+.member__info {
     padding-left: 0;
     margin-top: 0;
 }
@@ -1670,10 +1562,118 @@ td {
     margin-left: 2vw;
 }
 
+.person__flag{
+    display: flex;
+    flex-direction: row;
+    gap: 0.2vw;
+}
+
 /* Команды */
+
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 2vh 1vw;
+}
+
+tr {
+    border: 1px solid #101010;
+    transition: 0.4s ease;
+}
+
+th {
+    height: 6vh;
+    text-align: left;
+    padding-left: 1vw;
+}
+
+td {
+    height: 8vh;
+    padding-left: 1vw;
+}
+
+.table__header {
+    background-color: #101010;
+    margin-right: 10vw;
+}
+
+.td__flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.td__info {
+    display: flex;
+    flex-direction: row;
+    gap: 1vw;
+    font-size: 20px;
+}
+
+.td__img {
+    width: 2vw;
+}
+
+.td__text {
+    text-align: right;
+}
 
 .history-mobile {
     display: none;
+}
+
+
+.member__statistic {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-green {
+    color: green;
+}
+
+.info-red {
+    color: red;
+}
+
+.statistic {
+    display: block;
+    position: relative;
+    width: 26vw;
+    background: #ae110c;
+    height: 3vh;
+    border-radius: 20px;
+    border: none;
+}
+
+.bar {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #18e111;
+    border-radius: 20px 0 0 20px;
+}
+
+.bar-100 {
+    border-radius: 20px;
+}
+
+.bar::after {
+    content: '';
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%)
+    translateY(-50%);
+    font-size: 20px;
+}
+
+.statistic__info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .team__info-top {
@@ -1980,6 +1980,7 @@ tr:first-child:hover {
         visibility: hidden;
         padding: 0;
         margin: 0;
+        font-size: 20px;
         transition: all 0.3s ease-in-out;
     }
 
@@ -1989,13 +1990,13 @@ tr:first-child:hover {
         visibility: visible;
     }
 
-    #toggle:checked~.header__menu-burger li {
+    .header__menu-burger li {
         margin-top: 3vh;
         font-size: 20px;
         display: block;
     }
 
-    #toggle:checked~.header__menu-burger li a {
+    .header__menu-burger li a {
         display: block;
         padding: 10px;
         color: #fff;
@@ -2020,6 +2021,8 @@ tr:first-child:hover {
     .header__logo {
         width: 30vw;
     }
+    
+    /* Главная страница */
 
     .slide__info-btn {
         margin-top: 2vh;
@@ -2135,7 +2138,9 @@ tr:first-child:hover {
     }
 
     .row__cell {
-        padding: 4vh 6vw;
+        height: 20vh;
+        width: 30vw;
+        font-size: 14px;
     }
 
     .cell__img {
@@ -2242,7 +2247,8 @@ tr:first-child:hover {
         margin-left: -45vw;
     }
 
-    div.tickets__ticket:nth-child(4)>div:nth-child(2)>div:nth-child(1) {
+    div.tickets__ticket:nth-child(4)>
+    div:nth-child(2)>div:nth-child(1) {
         margin-left: -38vw;
     }
 
@@ -2284,6 +2290,10 @@ tr:first-child:hover {
 
     .tournament__img {
         height: 25vh;
+    }
+
+    .flag__img{
+        width: 4vw;
     }
 
     .line-with-dots {
@@ -2349,28 +2359,8 @@ tr:first-child:hover {
         flex-grow: 1;
     }
 
-    .hero h1 {
-        font-size: 2.15em;
-        letter-spacing: 0;
-        margin: 0;
-    }
-
-    .hero p.intro {
-        font-size: 1.15em;
-        margin-bottom: -10px;
-    }
-
     .round-details {
         font-size: 90%;
-    }
-
-    .hero-wrap {
-        padding: 2.5em;
-    }
-
-    .hero p.year {
-        margin: 5px 0 10px;
-        font-size: 18px;
     }
 
     .container-tournament {
@@ -2392,6 +2382,9 @@ tr:first-child:hover {
 
     /* Команды */
 
+    .td__img-mr {
+        width: 10vw;
+    }
     .team__title-title {
         font-size: 40px;
     }
@@ -2435,7 +2428,7 @@ tr:first-child:hover {
         padding-top: 2vh;
     }
 
-    .teams{
+    .teams {
         padding-bottom: 2vh;
     }
 
@@ -2447,11 +2440,11 @@ tr:first-child:hover {
         width: 20vw;
     }
 
-    .persong__info {
+    .person__info {
         width: 100%;
     }
 
-    .persong__info h6 {
+    .person__info h6 {
         font-size: 20px;
     }
 
@@ -2523,7 +2516,7 @@ tr:first-child:hover {
         margin: 0;
     }
 
-    .history__score{
+    .history__score {
         display: flex;
         flex-direction: column;
         margin-right: 2vw;
@@ -2532,37 +2525,37 @@ tr:first-child:hover {
 
     /* Команда награды */
 
-    .rewards__mobile{
+    .rewards__mobile {
         display: flex;
         flex-direction: column;
         gap: 2vh;
     }
 
-    .rewards__mobile-row{
+    .rewards__mobile-row {
         margin-left: 4vw;
         margin-right: 2vw;
         border-bottom: 1px solid #000;
     }
 
-    .rewards__mobile-row-top{
+    .rewards__mobile-row-top {
         display: flex;
         justify-content: space-between;
     }
-    
-    .mobile-row-top-left{
+
+    .mobile-row-top-left {
         display: flex;
         width: 100%;
     }
 
-    .mobile-row-top-left__number{
+    .mobile-row-top-left__number {
         width: 9vw;
     }
 
-    .rewards__mobile-row-img{
+    .rewards__mobile-row-img {
         width: 8vw;
     }
 
-    .rewards__mobile-row-bottom{
+    .rewards__mobile-row-bottom {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -2570,11 +2563,11 @@ tr:first-child:hover {
         margin-bottom: 2vh;
     }
 
-    .rewards__fond{
+    .rewards__fond {
         text-align: right;
     }
 
-    .mb-0{
+    .mb-0 {
         margin-bottom: 0;
     }
 
@@ -2587,12 +2580,12 @@ tr:first-child:hover {
         height: 25vh;
     }
 
-    .member__info{
+    .member__info {
         justify-content: start;
         align-items: center;
     }
 
-    .team__title__img{
+    .team__title__img {
         display: none;
     }
 
@@ -2602,43 +2595,8 @@ tr:first-child:hover {
         margin-left: -26vw;
         width: 160%;
     }
-/* 
-    .team__texts-column,
-    .team__text-top{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-    }
 
-    .grid1{
-        grid-column: 1/2;
-        grid-row: 1/2 ;
-    }
-
-    .grid2{
-        grid-column: 2/3;
-        grid-row: 1/2 ;
-    }
-
-    .grid3{
-        grid-column: 1/2;
-        grid-row: 2/3 ;
-    }
-
-    .grid4{
-        display: block;
-        grid-column: 2/3;
-        grid-row: 2/3 ;
-    }
-
- .grid5{
-        display: block;
-        grid-column: 1/2;
-        grid-row: 3/4 ;
-    } */
-    /* Футер */
-
-    .footer__container__row{
+    .footer__container__row {
         flex-direction: column;
     }
 
@@ -2646,7 +2604,7 @@ tr:first-child:hover {
         width: 100%;
     }
 
-    .footer__logo{
+    .footer__logo {
         width: 30vw;
     }
 }

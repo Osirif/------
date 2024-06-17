@@ -57,12 +57,12 @@
     <!-- Контент -->
 
     <main>
-        <div class="tournament">
+        <section class="tournament">
             <div class="tournament__img">
                 <img src="img/tournament.png" alt="Лого турнира">
             </div>
-            <div class="tournament__header__info">
 
+            <section class="tournament__header__info">
                 <div class="header__info__game">
                    <div class="info__game-top">
                         <div class="info__game__img">
@@ -80,7 +80,9 @@
                         </div>
                         <div class="info__game__region">
                             <p>Регионы</p>
-                            <h3>🇷🇺</h3>
+                            <div class="flag__img">
+                                <img src="img/russia.svg" alt="Россия">
+                            </div>
                         </div>
                    </div>
                    <div class="info__game-bottom">
@@ -94,8 +96,8 @@
                         </div>
                    </div>
                 </div>
-            </div>
-            <div class="header__info__road">
+            </section>
+            <section class="header__info__road">
                 <div class="line-with-dots">
                     <div class="line-dots">
                         <div class="dots">
@@ -129,12 +131,12 @@
                     </div>
                     <hr>
                 </div>
-            </div>
+            </section>
 
-            <div class="tournament__tabe">
-                <section id="bracket">
+            <section class="tournament__tabe">
+                <section class="bracket">
                     <div class="container-tournament">
-                        <div class="split split-one">
+                        <div class="split">
                             <div class="round round-one current">
                                 <div class="round-details">Четверть финала</div>
                                 <ul class="matchup matchup-w70">
@@ -153,7 +155,7 @@
                                     <li class="team team-top">TooManyQuestions<span class="score">74</span></li>
                                     <li class="team team-bottom">MajorTeam<span class="score">92</span></li>
                                 </ul>
-                            </div> <!-- END ROUND ONE -->
+                            </div> 
 
                             <div class="round round-two">
                                 <div class="round-details">Полу-финал</div>
@@ -165,7 +167,7 @@
                                     <li class="team team-top">PogChamp<span class="score">71</span></li>
                                     <li class="team team-bottom">MajorTeam<span class="score">70</span></li>
                                 </ul>
-                            </div> <!-- END ROUND TWO -->
+                            </div>
 
                             <div class="round round-three">
                                 <div class="round-details">Финал</div>
@@ -173,12 +175,13 @@
                                     <li class="team team-top">CrowCrowd.AG<span class="score"></span></li>
                                     <li class="team team-bottom">PogChamp<span class="score"></span></li>
                                 </ul>
-                            </div> <!-- END ROUND THREE -->
+                            </div>
+
                         </div>
                     </div>
                 </section>
-            </div>
-        </div>
+            </section>
+        </section>
     </main>
 
     <!-- Футер -->
@@ -193,7 +196,7 @@
                         <li><a href="#">Подписаться</a></li>
                     </ul>
                 </div>
-                <div class="footer-col">
+                <div class="footer-col mobile-dn">
                     <h4>Адрес</h4>
                     <ul>
                         <li>Адрес: <a href="#">Спартаковская ул., 2, г. Казань</a></li>
@@ -201,7 +204,7 @@
                         <li>Телефон:<a href="#">+7 (999) 999-99-99</a></li>
                     </ul>
                 </div>
-                <div class="footer-col">
+                <div class="footer-col mobile-dn">
                     <h4>Страницы</h4>
                     <ul>
                         <li><a href="#">Главная</a></li>
@@ -211,7 +214,7 @@
                         <li><a href="#">Билеты</a></li>
                     </ul>
                 </div>
-                <div class="footer-col">
+                <div class="footer-col mobile-dn">
                     <h4>Соц. сети</h4>
                     <ul>
                         <li><a href="#" class="footer__a-df"><i class="fa-brands fa-vk"></i><span

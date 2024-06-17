@@ -34,7 +34,6 @@
 
     <!-- Бургер меню -->
 
-
     <div class="burger__menu">
         <header class="header header__burger">
             <nav>
@@ -56,12 +55,13 @@
             </nav>
         </header>
     </div>
+
     <!-- Контент -->
 
     <main>
 
-        <div class="teams">
-            <div class="team__header">
+        <section class="teams">
+            <section class="team__header">
                 <div class="header__team">
                     <div class="team__info-top">
                         <div class="team__img">
@@ -79,7 +79,12 @@
                             </div>
                             <div class="team__text">
                                 <p class="text-gray">Страна</p>
-                                <h6>Россия 🇷🇺</h6>
+                                <div class="text-flag">
+                                    <h6>Россия</h6>
+                                    <div class="flag__img">
+                                        <img src="img/russia.svg" alt="Россия">
+                                    </div>
+                                </div>
                             </div>
                             <div class="team__text">
                                 <p class="text-gray">Призовые</p>
@@ -95,9 +100,9 @@
                         <p>Repulse</p>
                     </div>
                 </div>
-            </div>
+            </section>
 
-            <div class="teams__container">
+            <section class="teams__container">
                 <div class="teams__container__header">
                     <h2>Текущий состав</h2>
                     <div class="container__header__btns">
@@ -106,16 +111,20 @@
                     </div>
                 </div>
 
-                <div class="teams__container__memebers">
-
+                <section class="teams__container__memebers">
 
                     <a href="member.html" class="container__member">
                         <div class="member__person">
                             <div class="person__img">
                                 <img src="img/losskill.webp" alt="ЛоссКилл">
                             </div>
-                            <div class="persong__info">
-                                <h6>🇷🇺 ЛоссКилл</h6>
+                            <div class="person__info">
+                                <div class="person__flag">
+                                    <div class="flag__img">
+                                        <img src="img/russia.svg" alt="Россия">
+                                    </div>
+                                    <h6>ЛоссКилл</h6>
+                                </div>
                                 <p class="text-gray">Александр Суровнев</p>
                             </div>
                         </div>
@@ -140,8 +149,13 @@
                             <div class="person__img">
                                 <img src="img/telch.webp" alt="Тэлч">
                             </div>
-                            <div class="persong__info">
-                                <h6>🇧🇾 Тэлч</h6>
+                            <div class="person__info">
+                                <div class="person__flag">
+                                    <div class="flag__img">
+                                        <img src="img/russia.svg" alt="Россия">
+                                    </div>
+                                    <h6>Тэлч</h6>
+                                </div>
                                 <p class="text-gray">Дмитрий Дорошкевич</p>
                             </div>
                         </div>
@@ -166,8 +180,13 @@
                             <div class="person__img">
                                 <img src="img/strai.webp" alt="Страй">
                             </div>
-                            <div class="persong__info">
-                                <h6>🇷🇺 Страй</h6>
+                            <div class="person__info">
+                                <div class="person__flag">
+                                    <div class="flag__img">
+                                        <img src="img/russia.svg" alt="Россия">
+                                    </div>
+                                    <h6>Страй</h6>
+                                </div>
                                 <p class="text-gray">Юрий Еремеенко</p>
                             </div>
                         </div>
@@ -192,8 +211,13 @@
                             <div class="person__img">
                                 <img src="img/jetfire.webp" alt="Джетфайер">
                             </div>
-                            <div class="persong__info">
-                                <h6>🇷🇺 Джетфайер</h6>
+                            <div class="person__info">
+                                <div class="person__flag">
+                                    <div class="flag__img">
+                                        <img src="img/russia.svg" alt="Россия">
+                                    </div>
+                                    <h6>Джетфайр</h6>
+                                </div>
                                 <p class="text-gray">Вадим Зубрицкий</p>
                             </div>
                         </div>
@@ -218,8 +242,13 @@
                             <div class="person__img">
                                 <img src="img/dvice.webp" alt="Двайс">
                             </div>
-                            <div class="persong__info">
-                                <h6>🇷🇺 Двайс</h6>
+                            <div class="person__info">
+                                <div class="person__flag">
+                                    <div class="flag__img">
+                                        <img src="img/russia.svg" alt="Россия">
+                                    </div>
+                                    <h6>Двайс</h6>
+                                </div>
                                 <p class="text-gray">Кирилл Лебедев</p>
                             </div>
                         </div>
@@ -238,11 +267,11 @@
                             </div>
                         </div>
                     </a>
-                </div>
+                </section>
 
                 <!-- История матчей -->
 
-                <div class="teams__history">
+                <section class="teams__history">
                     <h2>История матчей</h2>
 
                     <!-- История матчей Desctop версия -->
@@ -388,7 +417,7 @@
 
                     <!-- История матчей мобильная версия -->
 
-                    <div class="history__row history-mobile">
+                    <section class="history__row history-mobile">
                         <div class="history__info-mobile">
                             <div class="history__info-mobile-row">
                                 <div class="history__info-mobile__img">
@@ -422,7 +451,7 @@
                                 <h6>2</h6>
                             </div>
                         </div>
-                    </div>
+                    </section>
 
                     <div class="history__row history-mobile">
                         <div class="history__info-mobile">
@@ -561,16 +590,16 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </section>
 
                 <!-- Награды -->
 
-                <div class="teams__rewards">
+                <section class="teams__rewards">
                     <h2>Награды</h2>
 
                     <!-- Награды Desktop версия -->
 
-                    <div class="rewards__table mobile-dn">
+                    <section class="rewards__table mobile-dn">
                         <table>
                             <tr class="table__header">
                                 <th>Место</th>
@@ -615,11 +644,11 @@
                                 <td>$ 175 000</td>
                             </tr>
                         </table>
-                    </div>
+                    </section>
 
                     <!-- Награды Mobile версия -->
 
-                    <div class="rewards__mobile">
+                    <section class="rewards__mobile">
                         <div class="rewards__mobile-row">
                             <div class="rewards__mobile-row-top">
                                 <div class="mobile-row-top-left">
@@ -675,11 +704,11 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
+                    </section>
+                </section>
+            </section>
 
-        </div>
+        </section>
 
     </main>
 
@@ -696,7 +725,7 @@
                         <li><a href="#">Подписаться</a></li>
                     </ul>
                 </div>
-                <div class="footer-col">
+                <div class="footer-col mobile-dn">
                     <h4>Адрес</h4>
                     <ul>
                         <li>Адрес: <a href="#">Спартаковская ул., 2, г. Казань</a></li>
@@ -704,7 +733,7 @@
                         <li>Телефон:<a href="#">+7 (999) 999-99-99</a></li>
                     </ul>
                 </div>
-                <div class="footer-col">
+                <div class="footer-col mobile-dn">
                     <h4>Страницы</h4>
                     <ul>
                         <li><a href="#">Главная</a></li>
@@ -714,7 +743,7 @@
                         <li><a href="#">Билеты</a></li>
                     </ul>
                 </div>
-                <div class="footer-col">
+                <div class="footer-col mobile-dn">
                     <h4>Соц. сети</h4>
                     <ul>
                         <li><a href="#" class="footer__a-df"><i class="fa-brands fa-vk"></i><span
